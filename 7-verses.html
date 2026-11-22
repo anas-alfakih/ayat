@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المصحف | آيات</title>
+  <meta name="description" content="اقرأ واستمع إلى القرآن الكريم: اختر السورة والقارئ، وشغّل تلاوة كل آية على حدة أو السورة كاملة.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
+</head>
+<body class="reader-page">
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"><span class="brand-mark">۝</span> آيات</a>
+      <nav class="nav-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="verses.html" class="active">المصحف</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container reader">
+
+    <div class="toolbar" id="toolbar">
+      <div class="field">
+        <label for="surahSelect">السورة</label>
+        <select id="surahSelect" disabled><option>جارٍ التحميل…</option></select>
+      </div>
+      <div class="field">
+        <label for="reciterSelect">القارئ</label>
+        <select id="reciterSelect" disabled><option>جارٍ التحميل…</option></select>
+      </div>
+      <div class="toolbar-actions">
+        <button class="btn btn-gold btn-sm" id="playSurahBtn" disabled>▶ تشغيل السورة</button>
+        <label class="toggle">
+          <input type="checkbox" id="continuousToggle" checked>
+          <span>تشغيل متواصل</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="surah-header" id="surahHeader" hidden>
+      <h2 class="surah-name" id="surahName"></h2>
+      <p class="surah-info" id="surahInfo"></p>
+      <p class="bismillah" id="surahBismillah" hidden>بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+    </div>
+
+    <div class="reader-status" id="readerStatus">جارٍ تحميل قائمة السور…</div>
+
+    <div class="verses" id="versesList"></div>
+
+  </main>
+
+  <div class="player-bar" id="playerBar" hidden>
+    <div class="player-now">
+      <strong id="npTitle"></strong>
+      <span id="npSub"></span>
+    </div>
+    <div class="player-controls">
+      <button class="pbtn" id="prevBtn" title="الآية السابقة">⏭</button>
+      <button class="pbtn pbtn-main" id="playPauseBtn" title="تشغيل / إيقاف">⏸</button>
+      <button class="pbtn" id="nextBtn" title="الآية التالية">⏮</button>
+    </div>
+    <div class="player-progress">
+      <span class="ptime" id="tCur">0:00</span>
+      <input type="range" id="seek" min="0" max="100" value="0" step="0.1">
+      <span class="ptime" id="tDur">0:00</span>
+    </div>
+    <button class="pbtn pbtn-close" id="closePlayer" title="إغلاق">✕</button>
+    <audio id="audio" preload="auto"></audio>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="credit">النص والصوت عبر واجهة <a href="https://alquran.cloud" target="_blank" rel="noopener">AlQuran Cloud</a> وشبكة Islamic Network.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

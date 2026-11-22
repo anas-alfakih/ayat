@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>آيات | القرآن الكريم قراءةً واستماعًا</title>
+  <meta name="description" content="موقع آيات: اقرأ القرآن الكريم بالرسم العثماني واستمع إلى تلاوة كل آية بصوت نخبة من القراء، مجانًا وبدون تسجيل.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
+</head>
+<body class="landing">
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"><span class="brand-mark">۝</span> آيات</a>
+      <nav class="nav-links">
+        <a href="index.html" class="active">الرئيسية</a>
+        <a href="verses.html">المصحف</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <p class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+      <h1>القرآن الكريم<br><span>قراءةً واستماعًا</span></h1>
+      <p class="lead">مصحف رقمي أنيق يجمع لك نص الآيات بالرسم العثماني وتلاوتها بأصوات نخبة القراء، آيةً آية، مباشرة من متصفحك.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="verses.html">ابدأ التلاوة</a>
+        <a class="btn btn-ghost" href="#verse-of-day">آية اليوم</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>١١٤</strong><span>سورة</span></div>
+        <div class="stat"><strong>٦٢٣٦</strong><span>آية</span></div>
+        <div class="stat"><strong>١٥+</strong><span>قارئًا</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="verse-of-day" id="verse-of-day">
+    <div class="container">
+      <div class="section-title">
+        <span class="ornament">﴿</span>
+        <h2>آية وتلاوة</h2>
+        <span class="ornament">﴾</span>
+      </div>
+      <div class="vod-card" id="vodCard">
+        <div class="vod-loading" id="vodLoading">جارٍ اختيار آية لك…</div>
+        <blockquote class="vod-text quran-text" id="vodText" hidden></blockquote>
+        <div class="vod-meta" id="vodMeta" hidden></div>
+        <div class="vod-actions" id="vodActions" hidden>
+          <button class="btn btn-gold btn-sm" id="vodPlay">▶ استمع للآية</button>
+          <button class="btn btn-ghost btn-sm" id="vodAnother">آية أخرى</button>
+        </div>
+        <audio id="vodAudio" preload="none"></audio>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <div class="section-title">
+        <span class="ornament">﴿</span>
+        <h2>ماذا يقدم لك آيات؟</h2>
+        <span class="ornament">﴾</span>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📜</div>
+          <h3>نص عثماني</h3>
+          <p>عرض الآيات بخط أميري قرآني مستمد من الرسم العثماني، واضح ومريح للقراءة.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎧</div>
+          <h3>تلاوة لكل آية</h3>
+          <p>استمع لأي آية على حدة بضغطة واحدة، أو شغّل السورة كاملة بالتتابع.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎙️</div>
+          <h3>نخبة القراء</h3>
+          <p>اختر قارئك المفضل من بين أكثر من خمسة عشر قارئًا: العفاسي، السديس، الحصري، المعيقلي وغيرهم.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>مجاني وخفيف</h3>
+          <p>لا تسجيل ولا تطبيق ولا إعلانات. يعمل مباشرة من المتصفح على الجوال والحاسوب.</p>
+        </div>
+      </div>
+      <div class="cta-strip">
+        <a class="btn btn-gold" href="verses.html">افتح المصحف الآن</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>آيات — صدقة جارية، جعلها الله في موازين حسنات من ساهم فيها.</p>
+      <p class="credit">النص والصوت عبر واجهة <a href="https://alquran.cloud" target="_blank" rel="noopener">AlQuran Cloud</a> وشبكة Islamic Network.</p>
+    </div>
+  </footer>
+
+  <script src="home.js"></script>
+</body>
+</html>
